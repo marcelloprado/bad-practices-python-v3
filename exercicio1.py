@@ -1,8 +1,8 @@
-# 1 - faltam as aspas, e em um cógigo normal, não vamos executar essa linhar
-print(Bem-vindo à sua lista de tarefas!)
+# 1 - faltam as aspas, e em um cógido normal, não vamos executar essa linhar
+print("Bem-vindo à sua lista de tarefas!")
 
 # 2
-tarefas = "uma lista vazia" 
+tarefas = [] 
 
 def adicionar_tarefa():
     # 3
@@ -14,9 +14,9 @@ def adicionar_tarefa():
 def ver_tarefas():
     print("\nSuas tarefas:")
     # 5
-    for i in tarefas:
+    for i in range(len(tarefas)):
         # 6 - temos 2 erros aqui
-        print(f"{i+1}. {tarefas[i]}")
+        print(f"{i}. {tarefas[i]}")
 
 def remover_tarefa():
     ver_tarefas()
@@ -41,7 +41,7 @@ def Menu():
         
         escolha = int(input("Escolha uma opção: "))
 
-        if escolha = 1: # 11
+        if escolha == 1: # 11
             adicionar_tarefa()
         elif escolha == 2:
             ver_tarefas()
@@ -54,4 +54,4 @@ def Menu():
 
 # Chamada para iniciar o programa
 # 12
-menu()
+Menu()
